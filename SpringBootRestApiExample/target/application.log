@@ -1,0 +1,39 @@
+2017-06-19 14:24:51 [main] INFO  c.r.springboot.SpringBootRestApiApp - Starting SpringBootRestApiApp v1.0.0 on Sagar-PC with PID 6460 (E:\new workspace\SpringBootRestApiExample\target\SpringBootRestApiExample-1.0.0.jar started by Sagar in E:\new workspace\SpringBootRestApiExample\target)
+2017-06-19 14:24:51 [main] DEBUG c.r.springboot.SpringBootRestApiApp - Running with Spring Boot v1.4.3.RELEASE, Spring v4.3.5.RELEASE
+2017-06-19 14:24:51 [main] INFO  c.r.springboot.SpringBootRestApiApp - No active profile set, falling back to default profiles: default
+2017-06-19 14:24:51 [main] INFO  o.s.b.c.e.AnnotationConfigEmbeddedWebApplicationContext - Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@3b95a09c: startup date [Mon Jun 19 14:24:51 IST 2017]; root of context hierarchy
+2017-06-19 14:24:59 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [class org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$a9fd8b8b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2017-06-19 14:25:01 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat initialized with port(s): 8080 (http)
+2017-06-19 14:25:01 [main] INFO  o.a.catalina.core.StandardService - Starting service Tomcat
+2017-06-19 14:25:01 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet Engine: Apache Tomcat/8.5.6
+2017-06-19 14:25:02 [localhost-startStop-1] INFO  o.a.c.c.C.[.[.[/SpringBootRestApi] - Initializing Spring embedded WebApplicationContext
+2017-06-19 14:25:02 [localhost-startStop-1] INFO  o.s.b.w.s.ServletRegistrationBean - Mapping servlet: 'dispatcherServlet' to [/]
+2017-06-19 14:25:02 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-06-19 14:25:02 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-06-19 14:25:02 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-06-19 14:25:02 [localhost-startStop-1] INFO  o.s.b.w.s.FilterRegistrationBean - Mapping filter: 'requestContextFilter' to: [/*]
+2017-06-19 14:25:04 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-06-19 14:25:04 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-06-19 14:25:05 [main] INFO  org.hibernate.Version - HHH000412: Hibernate Core {5.0.11.Final}
+2017-06-19 14:25:05 [main] INFO  org.hibernate.cfg.Environment - HHH000206: hibernate.properties not found
+2017-06-19 14:25:05 [main] INFO  org.hibernate.cfg.Environment - HHH000021: Bytecode provider name : javassist
+2017-06-19 14:25:05 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-06-19 14:25:08 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2017-06-19 14:25:08 [main] INFO  o.h.e.j.e.i.LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [3] less than 4
+2017-06-19 14:25:08 [main] INFO  o.h.tool.hbm2ddl.SchemaExport - HHH000227: Running hbm2ddl schema export
+2017-06-19 14:25:08 [main] INFO  o.h.tool.hbm2ddl.SchemaExport - HHH000230: Schema export complete
+2017-06-19 14:25:08 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-06-19 14:25:10 [main] INFO  o.h.h.i.QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+2017-06-19 14:25:12 [main] INFO  o.s.j.e.a.AnnotationMBeanExporter - Registering beans for JMX exposure on startup
+2017-06-19 14:25:12 [main] INFO  o.s.b.c.e.t.TomcatEmbeddedServletContainer - Tomcat started on port(s): 8080 (http)
+2017-06-19 14:25:12 [main] INFO  c.r.springboot.SpringBootRestApiApp - Started SpringBootRestApiApp in 25.892 seconds (JVM running for 29.988)
+2017-06-19 14:25:52 [http-nio-8080-exec-1] INFO  o.a.c.c.C.[.[.[/SpringBootRestApi] - Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-06-19 14:25:53 [http-nio-8080-exec-1] INFO  c.r.s.controller.ShopController - Sending request to google maps api for the address Mumbai
+2017-06-19 14:25:54 [http-nio-8080-exec-1] INFO  c.r.s.controller.ShopController - new shop added with name=shopTwo
+2017-06-19 14:26:04 [http-nio-8080-exec-3] INFO  c.r.s.controller.ShopController - Sending request to google maps api for the address Pune
+2017-06-19 14:26:05 [http-nio-8080-exec-3] INFO  c.r.s.controller.ShopController - shopTwo shop address updated.
+2017-06-19 14:26:30 [http-nio-8080-exec-5] INFO  c.r.s.controller.ShopController - Fetching all shops.
+2017-06-19 14:26:41 [http-nio-8080-exec-7] INFO  c.r.s.controller.ShopController - Getting near by shops for the latitude19.076 Longitude=72.8777 With in 20 km raidus
+2017-06-19 14:27:13 [http-nio-8080-exec-9] INFO  c.r.s.controller.ShopController - Getting near by shops for the latitude18.5204 Longitude=73.8567 With in 20 km raidus
