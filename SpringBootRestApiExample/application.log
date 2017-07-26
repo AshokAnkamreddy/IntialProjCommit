@@ -3706,3 +3706,42 @@ java.lang.NoClassDefFoundError: Could not initialize class groovy.lang.GroovySys
 2017-07-22 21:42:05 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
 2017-07-22 21:42:05 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 0 ms
 2017-07-22 21:42:05 [Thread-5] INFO  o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@39496223: startup date [Sat Jul 22 21:41:58 IST 2017]; root of context hierarchy
+2017-07-27 00:16:19 [Test worker] INFO  c.r.springboot.ShopControllerTest - Starting ShopControllerTest on Sagar-PC with PID 4108 (started by Sagar in D:\MyProj\IntialProjCommit\SpringBootRestApiExample)
+2017-07-27 00:16:19 [Test worker] INFO  c.r.springboot.ShopControllerTest - No active profile set, falling back to default profiles: default
+2017-07-27 00:16:20 [Test worker] INFO  o.s.w.c.s.GenericWebApplicationContext - Refreshing org.springframework.web.context.support.GenericWebApplicationContext@656b6b66: startup date [Thu Jul 27 00:16:20 IST 2017]; root of context hierarchy
+2017-07-27 00:16:21 [Test worker] INFO  o.s.b.f.a.AutowiredAnnotationBeanPostProcessor - JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+2017-07-27 00:16:22 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@656b6b66: startup date [Thu Jul 27 00:16:20 IST 2017]; root of context hierarchy
+2017-07-27 00:16:22 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/getshopsnearby],methods=[POST]}" onto public java.lang.String com.retailer.springboot.controller.ShopController.nearByShopsForUser(com.retailer.springboot.util.LatLng)
+2017-07-27 00:16:22 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/shops],methods=[POST]}" onto public java.lang.String com.retailer.springboot.controller.ShopController.createShop(com.retailer.springboot.model.Shop)
+2017-07-27 00:16:22 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/getshopsnearkm/],methods=[POST]}" onto public java.lang.String com.retailer.springboot.controller.ShopController.nearByShops(com.retailer.springboot.util.LatLng)
+2017-07-27 00:16:22 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerMapping - Mapped "{[/api/all],methods=[GET]}" onto public java.lang.Iterable<com.retailer.springboot.model.Shop> com.retailer.springboot.controller.ShopController.getAllUsers()
+2017-07-27 00:16:22 [Test worker] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-27 00:16:22 [Test worker] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-27 00:16:22 [Test worker] INFO  o.s.w.s.h.SimpleUrlHandlerMapping - Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-07-27 00:16:23 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring FrameworkServlet ''
+2017-07-27 00:16:23 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+2017-07-27 00:16:23 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 31 ms
+2017-07-27 00:16:24 [Test worker] INFO  c.r.springboot.ShopControllerTest - Started ShopControllerTest in 5.21 seconds (JVM running for 7.179)
+2017-07-27 00:16:24 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring FrameworkServlet ''
+2017-07-27 00:16:24 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+2017-07-27 00:16:24 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 0 ms
+2017-07-27 00:16:24 [Test worker] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping - Mapped "{[/api/getshopsnearby],methods=[POST]}" onto public java.lang.String com.retailer.springboot.controller.ShopController.nearByShopsForUser(com.retailer.springboot.util.LatLng)
+2017-07-27 00:16:24 [Test worker] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping - Mapped "{[/api/shops],methods=[POST]}" onto public java.lang.String com.retailer.springboot.controller.ShopController.createShop(com.retailer.springboot.model.Shop)
+2017-07-27 00:16:24 [Test worker] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping - Mapped "{[/api/getshopsnearkm/],methods=[POST]}" onto public java.lang.String com.retailer.springboot.controller.ShopController.nearByShops(com.retailer.springboot.util.LatLng)
+2017-07-27 00:16:24 [Test worker] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping - Mapped "{[/api/all],methods=[GET]}" onto public java.lang.Iterable<com.retailer.springboot.model.Shop> com.retailer.springboot.controller.ShopController.getAllUsers()
+2017-07-27 00:16:24 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@47c943a3
+2017-07-27 00:16:24 [Test worker] INFO  o.s.mock.web.MockServletContext - Initializing Spring FrameworkServlet ''
+2017-07-27 00:16:24 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+2017-07-27 00:16:24 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 0 ms
+2017-07-27 00:16:24 [Test worker] INFO  o.s.b.t.m.w.SpringBootMockServletContext - Initializing Spring FrameworkServlet ''
+2017-07-27 00:16:24 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+2017-07-27 00:16:24 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 0 ms
+2017-07-27 00:16:24 [Test worker] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping - Mapped "{[/api/getshopsnearby],methods=[POST]}" onto public java.lang.String com.retailer.springboot.controller.ShopController.nearByShopsForUser(com.retailer.springboot.util.LatLng)
+2017-07-27 00:16:24 [Test worker] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping - Mapped "{[/api/shops],methods=[POST]}" onto public java.lang.String com.retailer.springboot.controller.ShopController.createShop(com.retailer.springboot.model.Shop)
+2017-07-27 00:16:24 [Test worker] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping - Mapped "{[/api/getshopsnearkm/],methods=[POST]}" onto public java.lang.String com.retailer.springboot.controller.ShopController.nearByShops(com.retailer.springboot.util.LatLng)
+2017-07-27 00:16:24 [Test worker] INFO  o.s.t.w.s.s.StandaloneMockMvcBuilder$StaticRequestMappingHandlerMapping - Mapped "{[/api/all],methods=[GET]}" onto public java.lang.Iterable<com.retailer.springboot.model.Shop> com.retailer.springboot.controller.ShopController.getAllUsers()
+2017-07-27 00:16:24 [Test worker] INFO  o.s.w.s.m.m.a.RequestMappingHandlerAdapter - Looking for @ControllerAdvice: org.springframework.test.web.servlet.setup.StubWebApplicationContext@6367fea3
+2017-07-27 00:16:24 [Test worker] INFO  o.s.mock.web.MockServletContext - Initializing Spring FrameworkServlet ''
+2017-07-27 00:16:24 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization started
+2017-07-27 00:16:24 [Test worker] INFO  o.s.t.w.s.TestDispatcherServlet - FrameworkServlet '': initialization completed in 0 ms
+2017-07-27 00:16:24 [Thread-5] INFO  o.s.w.c.s.GenericWebApplicationContext - Closing org.springframework.web.context.support.GenericWebApplicationContext@656b6b66: startup date [Thu Jul 27 00:16:20 IST 2017]; root of context hierarchy

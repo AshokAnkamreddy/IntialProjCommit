@@ -1,5 +1,11 @@
+plugins {
+    id 'org.springframework.boot' version '1.4.3.RELEASE'
+}
 apply plugin: 'java'
 apply plugin: 'maven'
+
+
+
 
 group = 'com.retailer.springboot'
 version = '1.0.0'
