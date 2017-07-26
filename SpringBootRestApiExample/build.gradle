@@ -36,3 +36,22 @@ dependencies {
        compile group: 'org.springframework.boot', name: 'spring-boot-starter-jersey', version:'1.4.3.RELEASE'
        compile 'org.codehaus.groovy:groovy-all:2.3.6'
 }
+dependencies {
+    compile 'org.mindrot:jbcrypt:0.3m'
+}
+
+
+bootRepackage {
+    mainClass = 'com.retailer.springboot.SpringBootRestApiApp'
+}
+
+jar {
+    from {
+        (configurations.runtime).collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
+    manifest {
+        attributes("Main-Class": "com.retailer.springboot.SpringBootRestApiApp" )
+    }
+}
