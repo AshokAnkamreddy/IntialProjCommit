@@ -88,6 +88,10 @@ Retailer application which stores shop names, address and location by calling go
  >mvn install
  
  
+ If built by gradle go to build-->ibs-->SpringBootRestApiExample-1.0.0.jar
+ 
+ Run by command -->  > java -jar SpringBootRestApiExample-1.0.0.jar
+ 
 Go to target SpringBootRestApiExample\target folder
 
 Run SpringBootRestApiExample-1.0.0.jar file by using command
