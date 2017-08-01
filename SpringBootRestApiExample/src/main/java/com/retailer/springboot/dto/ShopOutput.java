@@ -2,7 +2,6 @@ package com.retailer.springboot.dto;
 
 import com.retailer.springboot.model.Shop;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Class ShopOutput.
  */

@@ -31,10 +31,9 @@ import com.retailer.springboot.util.PointF;
 import com.retailer.springboot.util.PositionCalculator;
 import com.retailer.springboot.util.Utils;
 
-// TODO: Auto-generated Javadoc
 /*@Author: Ashok Ankamreddy
 version-1.0
-Shop Api has add shop, get all shops , get newar by shop apis
+Shop Api has add shop, get all shops , get near by shop apis
 */
 
 /**
@@ -62,15 +61,18 @@ public class ShopController {
 	 *
 	 * @param shop the shop
 	 * @return the string
+	 * @throws ShopCreationException 
+	 * @throws IOException 
 	 */
 	/*Post method to add shop ,If shop already exists updates the shop address from google api
 	 * @parameter - Shop*/
 	@RequestMapping(value = "/shops", method = RequestMethod.POST)
-	public @ResponseBody String createShop(@RequestBody Shop shop) {
-		try {
+	public ResponseEntity<String> createShop(@RequestBody Shop shop) throws ShopCreationException, IOException {
+		
 			if(shop.getShopName()==null || shop.getAddress()==null){
-				return jsonUtils.objectMapperError("shop name and address are mandatory.");
+				throw new ShopCreationException("shop name and address are mandatory.");
 			}
+			try{
 			Shop oldShop = shopRepository.findByShopName(shop.getShopName());
 
 			if (oldShop == null) {
@@ -84,7 +86,7 @@ public class ShopController {
 				//save shop
 				shopRepository.save(shop);
 				logger.info("new shop added with name=" + shop.getShopName());
-				return jsonUtils.objectMapperSuccess(shop, "new Shop added.");
+				return new ResponseEntity<String>(jsonUtils.objectMapperSuccess(shop, "new Shop added."),HttpStatus.CREATED);
 			} else {
 				synchronized (oldShop) {
 					ShopOutput shopOutput = new ShopOutput();
@@ -103,19 +105,14 @@ public class ShopController {
 					logger.info(oldShop.getShopName()
 							+ " shop address updated.");
 					shopOutput.setCurrentAddress(oldShop);
-					return jsonUtils.objectMapperSuccess(shopOutput,
-							"Address got updated.");
+					return new ResponseEntity<String>(jsonUtils.objectMapperSuccess(shopOutput,
+							"Address got updated."),HttpStatus.OK);
 				}
 			}
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-			logger.error("Error while adding a shop. Stack trace="
-					+ Arrays.toString(e.getStackTrace()) + ".Error Message ="
-					+ e.getMessage());
-			return jsonUtils.objectMapperError("Error while adding shop.");
-		}
-
+			}catch(Exception e){
+				throw new ShopCreationException("Shop cannot be created.");
+			}
+		
 	}
 
 	/*Method to call the google service and returns latitude and longitude
@@ -201,15 +198,18 @@ public class ShopController {
 
 	}
 	
-	/**
+	/** To fetch the neaar by shops by his address
 	 * Near by shops for user.
 	 *
 	 * @param latLng the lat lng
 	 * @return the string
+	 * @throws FailedNearByShops 
 	 */
 	@RequestMapping(value = "/getshopsnearby", method = RequestMethod.POST)
-	public @ResponseBody String nearByShopsForUser(@RequestBody LatLng latLng) {
+	public ResponseEntity<String> nearByShopsForUser(@RequestBody LatLng address) throws FailedNearByShops {
 		try {
+			LatLng latLng = getLatLng(address.getAddress());
+			
 			PointF userLoc = new PointF(latLng.getLatitude(),
 					latLng.getLongitude());
 
@@ -242,10 +242,10 @@ public class ShopController {
 				}
 			});
 
-			return jsonUtils.objectMapperListToJson(allShops, allShops.size());
+			return new ResponseEntity<String>(jsonUtils.objectMapperListToJson(allShops, allShops.size()),HttpStatus.OK);
 		} catch (Exception e) {
 			e.printStackTrace();
-			return jsonUtils.objectMapperError("Error");
+			throw new FailedNearByShops("Service not availabel right now.");
 		}
 
 	}

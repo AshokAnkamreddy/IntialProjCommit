@@ -11,6 +11,18 @@ public class LatLng {
 	
 	/** The longitude. */
 	private Double longitude;
+	
+	private String address;
+	
+	
+
+	public String getAddress() {
+		return address;
+	}
+
+	public void setAddress(String address) {
+		this.address = address;
+	}
 
 	/**
 	 * Gets the latitude.

@@ -8,7 +8,6 @@ import org.springframework.data.repository.query.Param;
 
 import com.retailer.springboot.model.Shop;
 
-// TODO: Auto-generated Javadoc
 /**
  * The Interface ShopRepository.
  */
