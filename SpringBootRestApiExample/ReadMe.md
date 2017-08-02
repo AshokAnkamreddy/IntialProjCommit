@@ -52,8 +52,8 @@ Retailer application which stores shop names, address and location by calling go
     Get Service to get all the nearby shops with in 20 km radius.
 #### Input - Json 
     {
-    "latitude":19.0760,
-    "longitude":72.8777
+    "address":"Mumbai"
+  
     }
    Takes this input, send all the shops in the 20 km radius of this address.
  
