@@ -155,8 +155,8 @@ Method - post
 Headers - Content-Type : application/json
 Input json -
     {
-    "latitude":19.0760,
-    "longitude":72.8777
+    "address":"Mumbai"
+   
     }
 
 Output json - 
